@@ -6,8 +6,7 @@ dist: trusty
 
 language: python
 python:
-    - "nightly"
-    - 3.5
+    - "3.5.2"
     - 3.4
     - 3.3
     - 2.7
