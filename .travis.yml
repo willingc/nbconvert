@@ -16,8 +16,7 @@ env:
 addons:
   apt:
     packages:
-    - pandoc
-    - pandoc-citeproc
+    - texlive-full
     - texlive-xetex # latex to pdf converter
     - texlive-latex-extra # we need this for all the latex package we use, recommended is not enough
     - texlive-generic-recommended # .. and more ...
