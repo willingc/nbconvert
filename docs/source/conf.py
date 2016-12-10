@@ -15,21 +15,31 @@
 
 import os
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+# # If extensions (or modules to document with autodoc) are in another directory,
+# # add these directories to sys.path here. If the directory is relative to the
+# # documentation root, use os.path.abspath to make it absolute, like shown here.
+# #sys.path.insert(0, os.path.abspath('.'))
+#
+# if os.environ.get('READTHEDOCS', ''):
+#     # RTD doesn't use the repo's Makefile to build docs. We run
+#     # autogen_config.py to create the config docs (i.e. Configuration Options
+#     # page).
+#     import sys, subprocess
+#
+#     subprocess.run([sys.executable,'-m','pip','install','-e','../../.'])
+#
+#     with open('../autogen_config.py') as f:
+#         exec(compile(f.read(), 'autogen_config.py', 'exec'), {})
 
-if os.environ.get('READTHEDOCS', ''):
-    # RTD doesn't use the repo's Makefile to build docs. We run
-    # autogen_config.py to create the config docs (i.e. Configuration Options
-    # page).
-    import sys, subprocess
-    
-    subprocess.run([sys.executable,'-m','pip','install','-e','../../.'])
-    
-    with open('../autogen_config.py') as f:
-        exec(compile(f.read(), 'autogen_config.py', 'exec'), {})
+# Check the version information
+release_info = {}
+exec(compile(open('../../nbconvert/_version.py').read(), '../../nbconvert/_version.py', 'exec'), release_info)
+
+if os.environ.get('READTHEDOCS', None) == 'True':
+    print('On RTD, regen API')
+    ns = {'__file__':'../autogen_config.py'}
+    exec(compile(open('../autogen_config.py').read(), '../autogen_config.py', 'exec'), ns )
+    ns['main']()
 
 # -- General configuration ------------------------------------------------
 
