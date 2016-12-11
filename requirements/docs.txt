@@ -1,0 +1,9 @@
+pandoc
+nbformat
+jupyter_client
+ipython
+sphinx>=1.4
+sphinx_rtd_theme
+tornado
+entrypoints
+nbsphinx
