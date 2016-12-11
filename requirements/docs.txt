@@ -4,6 +4,6 @@ jupyter_client
 ipython
 sphinx>=1.4.6
 sphinx_rtd_theme
-git+https://github.com/spatialaudio/nbsphinx.git#egg=nbsphinx
+nbsphinx
 tornado
 entrypoints
