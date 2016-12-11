@@ -26,16 +26,12 @@ if os.environ.get('READTHEDOCS', ''):
     # page).
     import sys, subprocess
 
+    print('Running subprocess to install nbconvert from source')
     subprocess.run([sys.executable,'-m','pip','install','../../.'])
 
+    print('Creating the config_options.rst file')
     with open('../autogen_config.py') as f:
         exec(compile(f.read(), 'autogen_config.py', 'exec'), {})
-
-# if os.environ.get('READTHEDOCS', None) == 'True':
-#     print('On RTD, regen API')
-#     ns = {'__file__':'../autogen_config.py'}
-#     exec(compile(open('../autogen_config.py').read(), '../autogen_config.py', 'exec'), ns )
-#     ns['main']()
 
 # -- General configuration ------------------------------------------------
 
