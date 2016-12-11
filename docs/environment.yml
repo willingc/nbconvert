@@ -9,5 +9,6 @@ dependencies:
 - ipython
 - sphinx>=1.4
 - sphinx_rtd_theme
+- setuptools
 - pip:
     - nbsphinx
