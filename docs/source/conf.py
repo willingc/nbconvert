@@ -27,7 +27,7 @@ if os.environ.get('READTHEDOCS', ''):
     import sys, subprocess
 
     print('Running subprocess to install nbconvert from source')
-    subprocess.run([sys.executable,'-m','pip','install','../../.'])
+    subprocess.run([sys.executable, 'setup.py','install','../../.'])
 
     print('Creating the config_options.rst file')
     with open('../autogen_config.py') as f:
