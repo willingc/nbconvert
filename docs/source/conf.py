@@ -38,8 +38,10 @@ import os
     # page).
 import sys, subprocess
 
+print("Getting ready...")
+
 print('Running subprocess to install nbconvert from source')
-subprocess.run([sys.executable,'-m','pip','install','../../.'])
+subprocess.call([sys.executable,'-m','pip','install','../../.'])
 
 print('Creating the config_options.rst file')
 with open('../autogen_config.py') as f:
