@@ -3,3 +3,9 @@ conda:
 python:
     version: 3
     setup_py_install: true
+    pip_install: true
+    python:
+    extra_requirements:
+        - test
+        - serve
+        - execute

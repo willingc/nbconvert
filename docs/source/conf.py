@@ -31,10 +31,6 @@ import os
 #     with open('../autogen_config.py') as f:
 #         exec(compile(f.read(), 'autogen_config.py', 'exec'), {})
 
-# Check the version information
-release_info = {}
-exec(compile(open('../../nbconvert/_version.py').read(), '../../nbconvert/_version.py', 'exec'), release_info)
-
 if os.environ.get('READTHEDOCS', None) == 'True':
     print('On RTD, regen API')
     ns = {'__file__':'../autogen_config.py'}
