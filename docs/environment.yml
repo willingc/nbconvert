@@ -2,7 +2,7 @@ name: nbconvert_docs
 channels:
   - conda-forge
 dependencies:
-- python>=3.5
+- python>=3
 - pandoc
 - nbformat
 - jupyter_client
@@ -12,4 +12,4 @@ dependencies:
 - tornado
 - entrypoints
 - pip:
-    - nbsphinx
+    - git+https://github.com/spatialaudio/nbsphinx.git#egg=nbsphinx
