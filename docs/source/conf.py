@@ -51,7 +51,7 @@ print(sys.path)
 print("Getting ready...")
 
 print('Running subprocess to install nbconvert from source')
-subprocess.call([sys.executable,'-m','pip','install','../../.'])
+subprocess.call([sys.executable,'-m','pip','install','-e','../../.'])
 
 print('Creating the config_options.rst file')
 with open('../autogen_config.py') as f:
