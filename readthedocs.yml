@@ -1,5 +1,4 @@
-conda:
-    file: docs/environment.yml
+requirements-file: requirements/docs.txt
 python:
     version: 3.5
     pip_install: true
