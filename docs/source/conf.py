@@ -38,6 +38,16 @@ import os
     # page).
 import sys, subprocess
 
+print("Syspath ")
+print(sys.path)
+sys.path.append('../')
+sys.path.append('../../')
+print("append ../")
+print(sys.path)
+print("now os path")
+print(os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('.'))
+print(sys.path)
 print("Getting ready...")
 
 print('Running subprocess to install nbconvert from source')
