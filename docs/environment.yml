@@ -1,8 +1,9 @@
-name: nbconvert_docs
+name: nbc
 channels:
   - conda-forge
   - defaults
 dependencies:
+- python=3.5
 - pandoc
 - nbformat
 - jupyter_client
