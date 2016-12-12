@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-- python=3.5
 - pandoc
 - nbformat
 - jupyter_client
@@ -12,8 +11,4 @@ dependencies:
 - sphinx_rtd_theme
 - tornado
 - entrypoints
-- pip:
-   - pip>=9.0
-   - setuptools
-   - docutils<0.13.1
-   - git+https://github.com/spatialaudio/nbsphinx.git#egg=nbsphinx
+- nbsphinx
