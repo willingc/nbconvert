@@ -1,7 +1,7 @@
 nbformat
 jupyter_client
 ipython
-sphinx>=1.4.6
+sphinx!=1.5
 sphinx_rtd_theme
 nbsphinx
 tornado
