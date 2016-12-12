@@ -13,5 +13,7 @@ dependencies:
 - tornado
 - entrypoints
 - pip:
+   - pip>=9.0
+   - setuptools
    - docutils<0.13.1
    - git+https://github.com/spatialaudio/nbsphinx.git#egg=nbsphinx
